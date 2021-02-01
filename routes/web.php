@@ -36,3 +36,4 @@ Route::get('/contact',function(){
 Route::resource('user','UserController');
 
 Route::get('/profile','UserController@profile')->name('user.profile');
+Route::put('/profile','UserController@updateProfile')->name('user.profile');

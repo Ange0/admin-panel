@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Inertia\Inertia;
 
-class UserController extends Controller
+class PermissionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -83,22 +81,4 @@ class UserController extends Controller
     {
         //
     }
-
-    //
-    public function profile() 
-    {
-        return Inertia::render('Admin/Profile');
-    }
-
-    public function updateProfile(Request $request)
-    {
-        $user = Auth::user();
-        $this->validate($request,[
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,'.$user->id,
-            'phone' => 'required'
-        ]); 
-        $user->update($request->all());
-        return redirect()->back()->with('success','Profile Successufy');
-    }   
 }

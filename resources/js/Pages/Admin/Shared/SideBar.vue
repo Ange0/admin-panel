@@ -1,11 +1,11 @@
 <template>
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <inertia-link href="index3.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
+    </inertia-link>
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -15,7 +15,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <inertia-link href="#" class="d-block">Alexander Pierce</inertia-link>
         </div>
       </div>
 
@@ -26,15 +26,15 @@
                with font-awesome or any other icon font library -->
 
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <inertia-link href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
-            </a>
+            </inertia-link>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a  class="nav-link">
               <i class="nav-icon fas fa-users-cog"></i>
               <p>
                 Management
@@ -43,54 +43,54 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <inertia-link href="pages/layout/top-nav.html" class="nav-link">
                   <i class="fas fa-file-signature nav-icon"></i>
                   <p>Permissions</p>
-                </a>
+                </inertia-link>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/fixed-footer.html" class="nav-link">
+                <inertia-link href="pages/layout/fixed-footer.html" class="nav-link">
                   <i class="fas fa-fingerprint nav-icon"></i>
                   <p>Roles</p>
-                </a>
+                </inertia-link>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                <inertia-link href="pages/layout/collapsed-sidebar.html" class="nav-link">
                   <i class="fas fa-users nav-icon"></i>
                   <p>Users</p>
-                </a>
+                </inertia-link>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <inertia-link :href="route('user.profile')" class="nav-link">
               <i class="nav-icon far fa-user text-warning"></i>
               <p>Profile</p>
-            </a>
+            </inertia-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <inertia-link href="#" class="nav-link">
               <i class="nav-icon far fa-bell text-info"></i>
               <p>Notifications</p>
-            </a>
+            </inertia-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <inertia-link href="#" class="nav-link">
               <i class="nav-icon far fa-image text-success"></i>
               <p>Change Profile Photo</p>
-            </a>
+            </inertia-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <inertia-link href="#" class="nav-link">
               <i class="nav-icon fas fa-lock text-primary"></i>
               <p>Change password</p>
-            </a>
+            </inertia-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <inertia-link :href="route('logout')" method="post"   class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt text-danger"></i>
               <p>Logout</p>
-            </a>
+            </inertia-link>
           </li>
         </ul>
       </nav>
@@ -101,6 +101,7 @@
 </template>
 <script>
 export default {
-    
+
+
 }
 </script>

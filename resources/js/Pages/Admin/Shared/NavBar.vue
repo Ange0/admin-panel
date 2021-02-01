@@ -18,10 +18,10 @@
         <li class="nav-item">
          
 
-            <a href="#" class="nav-link">
+            <inertia-link :href="route('logout')" method="post" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt text-danger"></i>
                 Logout
-            </a>
+            </inertia-link>
         </li>
         </ul>
     </nav>
