@@ -34,7 +34,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Admin/Permission/Create');
     }
 
     /**
@@ -45,7 +45,15 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $this->validate($request,[
+            'name' => 'required',
+        ]);
+
+        $this->permission->create([
+            'name' => $request->name
+        ]);
+        return redirect()->route('permission.index')->with('success','Permission Successufy');
     }
 
     /**
@@ -56,7 +64,7 @@ class PermissionController extends Controller
      */
     public function show($id)
     {
-        //
+        dd($id);
     }
 
     /**
@@ -67,7 +75,7 @@ class PermissionController extends Controller
      */
     public function edit($id)
     {
-        //
+        dd($id);
     }
 
     /**
