@@ -34,6 +34,7 @@ Route::get('/contact',function(){
 
 //NB: que j'ai ajouter l'attribut $namespace dans RouteServiceProvider
 Route::resource('user','UserController');
+Route::resource('permission','PermissionController');
 
 Route::get('/profile','UserController@profile')->name('user.profile');
 Route::put('/profile','UserController@updateProfile')->name('user.profile');

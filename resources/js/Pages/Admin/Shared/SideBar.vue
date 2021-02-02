@@ -43,7 +43,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <inertia-link href="pages/layout/top-nav.html" class="nav-link">
+                <inertia-link :href="route('permission.index')" class="nav-link">
                   <i class="fas fa-file-signature nav-icon"></i>
                   <p>Permissions</p>
                 </inertia-link>
